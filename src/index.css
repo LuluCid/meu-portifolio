@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #fff5f7;
+  overflow-x: hidden;
+}
+
+/* Centralização extra para o body */
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Animação de flutuação suave */
+@keyframes peekaboo {
+  0%,
+  100% {
+    transform: translateY(0) scale(1.05);
+  }
+  50% {
+    transform: translateY(10px) scale(1);
+  }
+}
+
+.image-animation {
+  animation: peekaboo 4s ease-in-out infinite;
+}
+.tool-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(216, 141, 156, 0.2);
+  z-index: 20; /* Fica acima da imagem */
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.icon-sticker {
+  border-radius: 12px;
+  border: 3px solid white;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(216, 141, 156, 0.2);
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.icon-sticker:hover {
+  transform: scale(1.2) rotate(5deg); /* Efeito fofinho ao passar o mouse */
+}
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: #d88d9c; /* Rosa de destaque */
+}
+
+/* Ajuste das pétalas para o modo escuro */
+.dark-mode-petals {
+  opacity: 0.3 !important; /* Deixa as pétalas mais discretas à noite */
+}
+
+/* Animação das Pétalas (Dia) */
+@keyframes float {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Animação da Chuva (Noite) */
+@keyframes rain {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.lightning-flash {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  z-index: 0;
+  animation: flash 7s ease-out infinite; /* Pisca a cada 7 segundos */
+}
+
+@keyframes flash {
+  0%,
+  90%,
+  100% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0.3;
+  }
+  94% {
+    opacity: 0.1;
+  }
+  96% {
+    opacity: 0.4;
+  }
+}
+
+/* Animação da Chuva (Reta e Rápida) */
+@keyframes rain {
+  0% {
+    transform: translateY(-10vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
+
+/* Animação das Pétalas (Lenta e com Giro) */
+@keyframes float {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.skill-item {
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.skill-item:hover {
+  transform: translateY(-8px);
+}
+
+.skill-item:hover div {
+  background-color: white !important; /* Brilha no hover mesmo no dark mode */
+  box-shadow: 0 12px 20px rgba(216, 141, 156, 0.2);
+}
+
+strong {
+  color: #d88d9c; /* Rosa de destaque */
+  font-weight: 600;
+}
+
+/* No modo escuro, o destaque vira o verde da chuva */
+.is-dark strong {
+  color: #ff85a1;
+}
+
+.contact-card {
+  text-decoration: none;
+}
+
+.contact-card:hover div {
+  transform: scale(1.05) translateY(-5px);
+  background-color: white !important;
+  color: #d88d9c !important; /* Rosa destaque no hover */
+}
+
+/* No modo escuro o hover brilha mais */
+.contact-card:hover div {
+  box-shadow: 0 0 25px rgba(255, 133, 161, 0.3);
+}
