@@ -79,7 +79,7 @@ export default function App() {
               <img
                 src="/luana-anime.jpg"
                 alt="Luana estilo anime"
-                className="image-animation"
+                // className="image-animation"
                 style={{
                   width: "100%",
                   height: "100%",
