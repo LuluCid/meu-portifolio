@@ -172,7 +172,7 @@ export default function App() {
                   alt="Luana Cid"
                   style={{
                     width: "100%",
-                    height: "75%",
+                    height: "100%",
                     objectFit: "contain",
                   }}
                 />
