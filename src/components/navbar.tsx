@@ -27,7 +27,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
     }}>
       <a href="#home" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Início</a>
       <a href="#aboutme" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Sobre mim</a>
-      <a href="#skils" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Skills</a>
+      <a href="#skills" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Skills</a>
       <a href="#projetos" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Projetos</a>
       <a href="#contato" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Contato</a>
 
