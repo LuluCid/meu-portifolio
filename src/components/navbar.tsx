@@ -31,7 +31,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
       <a href="#projetos" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Projetos</a>
       <a href="#contato" className="nav-link" style={{ color: isDark ? "#fce7f3" : "#5c4044" }}>Contato</a>
 
-      <button 
+      <button
         onClick={toggleTheme}
         style={{
           background: "none",

@@ -195,9 +195,11 @@ body {
 }
 
 .skill-item:hover div {
-  background-color: white !important; /* Brilha no hover mesmo no dark mode */
   box-shadow: 0 12px 20px rgba(216, 141, 156, 0.2);
+  transform: translateY(-8px);
 }
+
+
 
 strong {
   color: #d88d9c; /* Rosa de destaque */
