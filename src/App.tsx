@@ -1,7 +1,7 @@
 import Background from "./components/background";
 import { useState, useMemo } from "react";
 import Navbar from "./components/navbar";
-import { Github, Linkedin, Mail, ExternalLink, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, ArrowRight, FileText } from "lucide-react";
 
 export default function App() {
   const [isDark, setIsDark] = useState(true);
@@ -45,25 +45,25 @@ export default function App() {
     () =>
       isDark
         ? {
-            bg: "#1A0F12",
-            textPrimary: "#fff",
-            textSecondary: "#ff85a1",
-            accent: "#ff85a1",
-            accentGlow: "rgba(255, 133, 161, 0.3)",
-            cardBg: "rgba(45, 27, 36, 0.7)",
-            border: "#ff85a1",
-            description: "#d1d1d1",
-          }
+          bg: "#1A0F12",
+          textPrimary: "#fff",
+          textSecondary: "#ff85a1",
+          accent: "#ff85a1",
+          accentGlow: "rgba(255, 133, 161, 0.3)",
+          cardBg: "rgba(45, 27, 36, 0.7)",
+          border: "#ff85a1",
+          description: "#d1d1d1",
+        }
         : {
-            bg: "#FFF9FA",
-            textPrimary: "#5c4044",
-            textSecondary: "#b56576",
-            accent: "#b56576",
-            accentGlow: "rgba(255, 133, 161, 0.5)",
-            cardBg: "rgba(255, 255, 255, 0.5)",
-            border: "rgba(255, 133, 161, 0.25)",
-            description: "#8a8a8a",
-          },
+          bg: "#FFF9FA",
+          textPrimary: "#5c4044",
+          textSecondary: "#b56576",
+          accent: "#b56576",
+          accentGlow: "rgba(255, 133, 161, 0.5)",
+          cardBg: "rgba(255, 255, 255, 0.5)",
+          border: "rgba(255, 133, 161, 0.25)",
+          description: "#8a8a8a",
+        },
     [isDark],
   );
 
@@ -180,6 +180,7 @@ export default function App() {
             </div>
           </div>
 
+
           <h1
             style={{
               fontSize: "clamp(2.5rem, 8vw, 5rem)",
@@ -205,6 +206,41 @@ export default function App() {
           >
             Analista e Desenvolvedora de Sistemas em formação.
           </p>
+
+          {/* LINK PARA O CURRÍCULO */}
+          <a
+            href="/Curriculo-Luana-Cid.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "12px 24px",
+              marginTop: "30px",
+              borderRadius: "50px",
+              backgroundColor: theme.accentGlow,
+              border: `1px solid ${theme.accent}`,
+              color: theme.accent,
+              textDecoration: "none",
+              fontSize: "0.9rem",
+              fontWeight: "bold",
+              transition: "all 0.3s ease",
+              zIndex: 10,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = theme.accent;
+              e.currentTarget.style.color = isDark ? "#1A0F12" : "#FFF";
+              e.currentTarget.style.transform = "translateY(-2px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = theme.accentGlow;
+              e.currentTarget.style.color = theme.accent;
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            <FileText size={18} /> Ver Currículo
+          </a>
         </div>
         {/* SEÇÃO SOBRE MIM */}
         <section id="aboutme"></section>
@@ -415,7 +451,7 @@ export default function App() {
                     boxShadow: isDark
                       ? "0 10px 30px rgba(0,0,0,0.5)"
                       : "0 10px 30px rgba(181, 101, 118, 0.1)",
-                    opacity: isWorking ? 0.9 : 1, 
+                    opacity: isWorking ? 0.9 : 1,
                   }}
                 >
                   {/* CONTAINER DA IMAGEM COM BADGE DE STATUS */}
@@ -597,7 +633,7 @@ export default function App() {
             })}
           </div>
         </section>
-       
+
         {/* SEÇÃO DE CONTATO - IGUAL À IMAGEM */}
         <section
           id="contato"
