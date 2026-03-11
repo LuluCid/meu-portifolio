@@ -209,7 +209,7 @@ export default function App() {
 
           {/* LINK PARA O CURRÍCULO */}
           <a
-            href="/Curriculo-Luana-Cid.pdf"
+            href="/Currículo-Luana-Cid.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={{
